@@ -118,12 +118,12 @@ namespace linq02
                                         .Except(
                                             list2.Select(x => String.Format(x).ToLower()))
                                         .ToList();
-            foreach(var c in UniqueCountry)
+            foreach (var c in UniqueCountry)
             { Console.WriteLine(c); }
 
             spacing();
             /*Q15*/
-            Dictionary<int,Product> productDictionary=products.ToDictionary(x => x.ProductID);
+            Dictionary<int, Product> productDictionary = products.ToDictionary(x => x.ProductID);
             Console.WriteLine(productDictionary[18]);
 
             spacing();
@@ -169,8 +169,8 @@ namespace linq02
             spacing();
 
             /*Q21*/
-            List<string> Report= products.Zip(customers,(product, customer) 
-                =>$"{product.ProductName} sold to {customer.CustomerName}").ToList();
+            List<string> Report = products.Zip(customers, (product, customer)
+                => $"{product.ProductName} sold to {customer.CustomerName}").ToList();
 
             foreach (var item in Report)
             {
